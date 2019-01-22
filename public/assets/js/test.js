@@ -1,5 +1,5 @@
 var mainApp={};
-
+var usid;
 (function(){
 
     var firebase = app_firebase;
@@ -9,12 +9,13 @@ var mainApp={};
             var user1 = firebase.auth().currentUser;
             var   name = user1.displayName;
 
-
+          usid = firebase.auth().currentUser.displayName;
+          // alert(usid);
           // User is signed in.
-          alert(name);
+          //alert(name);
         } else {
           // No user is signed in.
-          window.location.replace("login1.html");
+          window.location.replace("index.html");
 
         }
       });
