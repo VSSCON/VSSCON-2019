@@ -184,7 +184,7 @@
                             <span style="color: red;">{{ error }}</span>
                         </div>
                         <div v-bind:class="{ active: toggle }">
-                                <button class="btn btn--radius-2 btn--blue" v-on:click="profile">View Profile</button>
+                                <button class="btn btn--radius-2 btn--blue" v-on:click="profile"><a href="profile.html"> View Profile</a></button>
                             </div>
                     </div>
                 </div>
@@ -193,17 +193,11 @@
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="assets/js/firebase.js"></script>
+
     <script>
           // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAXQJ_ksPfxqaYr24re1_rEwub9OAEuTvM",
-    authDomain: "enigma-team.firebaseapp.com",
-    databaseURL: "https://enigma-team.firebaseio.com",
-    projectId: "enigma-team",
-    storageBucket: "enigma-team.appspot.com",
-    messagingSenderId: "79460500959"
-  };
-  firebase.initializeApp(config);
+  
 
 // Get a reference to the database service
 var database = firebase.database();

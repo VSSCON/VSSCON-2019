@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/test.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/plugins/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" type="text/css" href="assets/plugins/owl-carousel/owl.theme.css" />
     <link rel="stylesheet" type="text/css" href="assets/plugins/headereffects/css/component.css">
@@ -300,7 +303,6 @@
                                         
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="tour.html">Tour</a></li>
-                                        <li><a href="registration.html">Registration</a></li>
                                         <li><a href="team.html">Team</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <img src="assets/img/VSSCON/vssut logo.png" width="80" height="80" alt="" />
@@ -377,7 +379,7 @@
                                 <p>
                                     Phone</p>
                                 <h3>
-                                    +1 555 666 9999</h3>
+                                    +91 6371506683</h3>
                             </div>
                         </div>
                     </div>
@@ -388,7 +390,7 @@
                                 <p>
                                     E-mail</p>
                                 <h3>
-                                    letstalk@thempleite.com</h3>
+                                    contact@vsscon.in</h3>
                             </div>
                         </div>
                     </div>
@@ -399,18 +401,18 @@
                                 <p>
                                     Postal</p>
                                 <h3>
-                                    32-Grey Suite, NY</h3>
+                                    VSSUT Burla</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 text-center">
                         <div class="services-box-3">
-                            <i class="fa fa-pinterest-square"></i>
+                            <i class="fa fa-facebook"></i>
                             <div class="content">
                                 <p>
-                                    Pinterest</p>
+                                    Facebook</p>
                                 <h3>
-                                    pinterest.com/frittt</h3>
+                                <a href="https://www.facebook.com/vssutmun" target="_blank" style="color:white;">facebook.com/vssutmun</a></h3>
                             </div>
                         </div>
                     </div>
@@ -422,42 +424,33 @@
                 <div class="p-t-30 p-b-50">
                     <div class="row">
                         <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 xs-m-b-20">
-                            <img src="assets/img/logo_condensed.png" alt="" data-src="assets/img/logo_condensed.png"
-                                data-src-retina="assets/img/logo2x.png" width="119" height="22" />
-                            <br />
-                            <br />
-                            © Frittt Templates.
+                           
+                            
+                            © VSSCON 2019
                             <br />
                             All Rights Reserved.
                         </div>
                         <div class="col-md-4 col-lg-3 col-sm-4  col-xs-12 xs-m-b-20">
                             <address class="xs-no-padding  col-md-6 col-lg-6 col-sm-6  col-xs-12">
-                                32 - Grey Suite<br>
-                                Odd Street,<br>
-                                NY, USA.
+                                VSSUT Burla<br>
+                                Sambalpur,<br>
+                                Odisha.
                             </address>
                             <div class="xs-no-padding col-md-6 col-lg-6 col-sm-6">
                                 <div>
-                                    (1) 555 666 9999</div>
-                                <a href="javascript:">letstalk@thempleite.com</a>
+                                    (91) 6371506683</div>
+                                <a href="javascript:">contact@vsscon.in</a>
                             </div>
                             <div class="clearfix">
                             </div>
                         </div>
-                        <div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 xs-m-b-20">
-                            <div class="bold">
-                                We Are Hiring</div>
-                            Send you resume at <a href="javascript:">careers@thempleite.com</a>
-                        </div>
+                       
                         <div class="col-md-2 col-lg-2 col-sm-2  col-xs-12 ">
                             <div class="bold">
-                                FOLLOW US</div>
+                                FOLLOW US ON</div>
                             <br />
-                            <a href="javascript:"><i class="fa fa-facebook fa-2x"></i></a>&nbsp; <a href="javascript:">
-                                <i class="fa fa-twitter fa-2x"></i></a>&nbsp; <a href="javascript:"><i class="fa fa-youtube-play  fa-2x">
-                                </i></a>&nbsp; <a href="javascript:"><i class="fa fa-github fa-2x"></i></a>&nbsp;
-                            <a href="javascript:"><i class="fa fa-dribbble fa-2x"></i></a>&nbsp; <a href="javascript:">
-                                <i class="fa fa-pinterest fa-2x"></i></a>
+                            <a href="https://www.facebook.com/vssutmun" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;  <a href="https://www.instagram.com/vssutmun/" target="_blank">
+                                <i class="fa fa-instagram fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -466,49 +459,33 @@
     </div>
 
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+  
+
     <script>
-          // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAXQJ_ksPfxqaYr24re1_rEwub9OAEuTvM",
-    authDomain: "enigma-team.firebaseapp.com",
-    databaseURL: "https://enigma-team.firebaseio.com",
-    projectId: "enigma-team",
-    storageBucket: "enigma-team.appspot.com",
-    messagingSenderId: "79460500959"
-  };
-  firebase.initializeApp(config);
+ 
 
 
 
-
-var example1 = new Vue({
-  el: '#profile',
-  data() {
-      return{
-       data: null
-      }
-      
-  },
-  created () {
-    this.fetchData()
-  },
-  methods: {
-    fetchData () {
+    (function() {
         // Get a reference to the database service
 var database = firebase.database();
 // Get a reference to the storage service, which is used to create references in your storage bucket
 var storage = firebase.storage();
 
+var user = firebase.auth().currentUser;
+
+//alert(firebase.auth().currentUser.uid);
+//var usid = user.uid;
+// console.log(uid);
 // Create a storage reference from our storage service
 var storageRef = storage.ref();
-var imgRef = storage.ref('profile/hero');
+var imgRef = storage.ref('profile/az');
                 imgRef.getDownloadURL().then((url)=>{
                     document.getElementById("profileImg").src = url;
                 })
-var starCountRef = database.ref('users/hero');
+var starCountRef = database.ref('users/Satyajit Mohapatra');
 starCountRef.on('value', function(snapshot) {
-    var data = snapshot.val();
+    data = snapshot.val();
    this.data = data;
    document.getElementById("name").innerHTML = data.username;
    document.getElementById("institution").innerHTML ="<b>Institution: </b>"+ data.institution;
@@ -519,11 +496,9 @@ starCountRef.on('value', function(snapshot) {
    document.getElementById("commitee").innerHTML = '<b>Commitee: </b>'+data.checkedCommitee;
    document.getElementById("payment").innerHTML = '<b>Payment Status: </b><i>Not Completed</i>';
    
-});
-    }
+})})();
     
-    }
-})
+    
         </script>
 
     <!-- BEGIN CORE JS FRAMEWORK -->

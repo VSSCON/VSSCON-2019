@@ -7,7 +7,7 @@ var app_firebase={};
     authDomain: "vsscon-2k19.firebaseapp.com",
     databaseURL: "https://vsscon-2k19.firebaseio.com",
     projectId: "vsscon-2k19",
-    storageBucket: "",
+    storageBucket: "vsscon-2k19.appspot.com",
     messagingSenderId: "542178147445"
   };
 
