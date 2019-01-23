@@ -28,16 +28,72 @@
     <link href="assets/css/magic_space.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- END CSS TEMPLATE -->
 
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
     <script src="assets/js/firebase.js"></script>
     <!-- <script src="assets/js/test.js"></script> -->
+
+    <style>
+#work{
+    margin-top:7%;
+    margin-bottom: 5%;
+}
+    .bg-overlay1 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("assets/img/VSSCON/del.png");
+   
+    background-size: cover;
+    color: #fff;
+    /* height: 400px;
+    width: 33%; */
+    background-position: center center;
+    border: 0.4em solid  #fff;
+    height: 25em;
+}
+
+.bg-overlay2 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("assets/img/VSSCON/ip.png");
+   
+    background-size: cover;
+    color: #fff;
+    border: 0.4em solid  #fff;
+    height: 25em;
+    /* left: 0;
+    height: 400px;
+    width: 33%; */
+   
+}
+.bg-overlay3 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("assets/img/VSSCON/ca.png");
+   
+    background-size: cover;
+    color: #fff;
+    border: 0.4em solid  #fff;
+    height: 25em;
+    /* left: 0;
+    height: 400px;
+    width: 33%; */
+   
+}
+ .bg-overlay2 button{
+position: center center;
+margin-top: 35%;
+}
+.bg-overlay1 button{
+	position: center center;
+margin-top: 35%;
+}
+.bg-overlay3 button{
+	position: center center;
+margin-top: 35%;
+}
+    </style>
 </head>
 <!-- END HEAD -->
 <body>
     <div class="main-wrapper">
-        <div role="navigation" class="navbar navbar-transparent navbar-static-top">
+        <div role="navigation" class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="compressed">
                     <div class="navbar-header">
@@ -51,14 +107,23 @@
                     <div class="navbar-collapse collapse">
                             <img src="assets/img/VSSCON/mun logo new.png" width="80" height="80" alt="" />
                             <ul class="nav navbar-nav navbar-right">
-                                    
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="tour.html">Tour</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <img src="assets/img/VSSCON/vssut logo.png" width="80" height="80" alt="" />
-                                   
-                                </ul>
+                                        
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tour.html">Tour</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li class="dropdown">
+                                        <span class="dropbtn">Hello</span>
+                                        <div class="dropdown-content">
+                                            <a href="profile.html">View Profile</a>
+                                            <a href="#">Sign Out</a>
+                                            
+                                        </div>
+                                        </li>
+                                <img src="assets/img/VSSCON/vssut logo.png" width="80" height="80" alt="" />
+                               
+                            </ul>
                     </div>
                     <!--/.nav-collapse -->
                 </div>
@@ -66,7 +131,28 @@
         </div>
         
         <!-- regForm -->
-        <object width="100%" height="800px" data="regForm.html"></object>
+        <!-- <object width="100%" height="800px" data="regForm.html"></object> -->
+        
+        <div class="container" id="work">
+                <div class="row">
+                  <div class="col-sm-4 col-xs-12 bg-overlay1">
+                    <div class="text-center">
+                      <a href="https://goo.gl/forms/z3aMFbmJKGyQTFfi2"><button type="button" class="btn btn-primary btn-lg"> Register as Deligate </button></a>
+                    </div>
+                    
+                    </div>
+                    <div class="col-sm-4 col-xs-12 bg-overlay2">
+                    <div class="text-center">
+                      <a href="https://goo.gl/forms/6esCBXsgdK6uxmdj2"><button type="button" class="btn btn-primary btn-lg"> Register as IP </button></a>
+                    </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 bg-overlay3">
+                            <div class="text-center">
+                              <a href="https://goo.gl/forms/Xb92DAOP7ry6U2ss1" ><button type="button" class="btn btn-primary btn-lg"> Register as Campus Ambassador </button></a>
+                            </div>
+                            </div>
+                </div>
+              </div>
 
         <!-- bottom  -->
         <div class="section black contact-details green-icons">
