@@ -41,8 +41,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-// function logOut(){
-//   firebase.auth().signOut();
-//   window.location.replace("index.html");
+function logOut(){
+  firebase.auth().signOut();
+  window.location.replace("index.html");
 
-// }
+}
