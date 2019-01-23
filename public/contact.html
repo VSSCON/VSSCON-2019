@@ -46,18 +46,18 @@
                             <ul class="nav navbar-nav navbar-right">
                                         
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="tour.html">Tour</a></li>
-                                <li><a href="team.html">Team</a></li>
+                                <li><a href="#">Tour</a></li>
+                                <li><a href="#">Team</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li class="dropdown">
-                                        <span class="dropbtn">Hello</span>
-                                        <div class="dropdown-content">
-                                            <a href="profile.html">View Profile</a>
-                                            <a href="#">Sign Out</a>
-                                            
-                                        </div>
-                                        </li>
+                                <li><a href="registration.html" id="hlogin">Register</a></li>
+                                <li class="dropdown" >
+                                    <span class="dropbtn" id="name">Hello</span>
+                                    <div class="dropdown-content">
+                                        <a href="profile.html">View Profile</a>
+                                        <button class="btn btn-danger" onclick="logOut()">LogOut</button>
+                                        
+                                    </div>
+                                    </li>
                                 <img src="assets/img/VSSCON/vssut logo.png" width="80" height="80" alt="" />
                                
                             </ul>
@@ -78,10 +78,10 @@
                 <div class=" p-b-60">
                     <div class="row p-t-30">
                         <div class="col-md-6 col-xs-12">
-						<form id="contact_form" method="post" action="https://formspree.io/smohapatra200@gmail.com">
+						<form id="contact_form" action="https://formspree.io/vsscon2k19@gmail.com" method="POST">
                             <div class="row form-row">
                                 <div class="col-md-10">
-                                    <input name="FullName" id="textFirstName" type="text" class="form-control "
+                                    <input type="text" name="name" id="textFirstName" class="form-control "
                                         placeholder="Full Name">
                                 </div>
                             </div>
@@ -89,13 +89,13 @@
                         
                             <div class="row form-row">
                                 <div class="col-md-10">
-                                    <input name="EmailAddress" id="txtEmailAddress" type="text" class="form-control"
+                                    <input type="text" name="_replyto" id="txtEmailAddress" class="form-control"
                                         placeholder="Email address">
                                 </div>
                             </div>
                             <div class="row form-row">
                                 <div class="col-md-10">
-                                    <textarea id="txtDesc" name="Message" type="text" class="form-control" placeholder="" rows="8"></textarea>
+                                    <textarea type="text" id="txtDesc" name="message" class="form-control" placeholder="" rows="8"></textarea>
                                 </div>
                             </div>
                             <div class="row form-row">
@@ -106,7 +106,12 @@
 								<div id="success">Your message has been successfully!</div>
 								<div id="error">Unable to send your message, please try later.</div>
                             </div>
-						</form>
+                        </form>
+                        <!-- <form action="https://formspree.io/vsscon2k19@gmail.com" method="POST">
+                            <input type="text" name="name">
+                            <input type="email" name="_replyto">
+                            <input type="submit" value="Send">
+                          </form> -->
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.2704844019245!2d83.90157165100841!3d21.49712278567664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213da4ec28af2d%3A0xb33a5cc9af8c33c7!2sVEER+SURENDRA+SAI+UNIVERSITY+OF+TECHNOLOGY!5e0!3m2!1sen!2sin!4v1548238497861" width="600" height="350" frameborder="0" style="border:1;" id="map" allowfullscreen></iframe>

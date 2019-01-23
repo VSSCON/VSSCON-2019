@@ -88,7 +88,34 @@ margin-top: 35%;
 	position: center center;
 margin-top: 35%;
 }
+#block2{
+    display: none;
+}
+#block1{
+    display: none;
+}
     </style>
+    <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("block2").style.display = 'block';
+            document.getElementById("block1").style.display = 'none';
+          name = user.displayName;
+
+          email = user.email;
+          url = user.photoURL;
+          
+
+        } else {
+          // No user is signed in.
+          document.getElementById("block1").style.display = 'block';
+          document.getElementById("block2").style.display = 'none';
+        //   window.location.replace("index.html");
+
+        }
+      });
+
+    </script>
 </head>
 <!-- END HEAD -->
 <body>
@@ -109,18 +136,18 @@ margin-top: 35%;
                             <ul class="nav navbar-nav navbar-right">
                                         
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="tour.html">Tour</a></li>
-                                <li><a href="team.html">Team</a></li>
+                                <li><a href="#">Tour</a></li>
+                                <li><a href="#">Team</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li class="dropdown">
-                                        <span class="dropbtn">Hello</span>
-                                        <div class="dropdown-content">
-                                            <a href="profile.html">View Profile</a>
-                                            <a href="#">Sign Out</a>
-                                            
-                                        </div>
-                                        </li>
+                                <li><a href="registration.html" id="hlogin">Register</a></li>
+                                <li class="dropdown" >
+                                    <span class="dropbtn" id="name">Hello</span>
+                                    <div class="dropdown-content">
+                                        <a href="profile.html">View Profile</a>
+                                        <button class="btn btn-danger" onclick="logOut()">LogOut</button>
+                                        
+                                    </div>
+                                    </li>
                                 <img src="assets/img/VSSCON/vssut logo.png" width="80" height="80" alt="" />
                                
                             </ul>
@@ -133,9 +160,9 @@ margin-top: 35%;
         <!-- regForm -->
         
         <div class="container" id="work">
-        <div class="signin">  <object width="100%" height="" data="login.html"></object></div>
+        <div class="signin" id="block1">  <object width="100%" height="" data="login.html"></object></div>
 
-                <div class="row">
+                <div class="row" id="block2">
                   <div class="col-sm-4 col-xs-12 bg-overlay1">
                     <div class="text-center">
                       <a href="https://goo.gl/forms/z3aMFbmJKGyQTFfi2"><button type="button" class="btn btn-primary btn-lg"> Register as Deligate </button></a>

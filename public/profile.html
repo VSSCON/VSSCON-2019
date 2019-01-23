@@ -303,10 +303,10 @@
                             <ul class="nav navbar-nav navbar-right">
                                         
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="tour.html">Tour</a></li>
-                                <li><a href="team.html">Team</a></li>
+                                <li><a href="#">Tour</a></li>
+                                <li><a href="#">Team</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="registration.html" id="hlogin">Register</a></li>
                                 <li class="dropdown" >
                                         <span class="dropbtn" id="name">Hello</span>
                                         <div class="dropdown-content">
@@ -479,6 +479,7 @@ var storage = firebase.storage();
 firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             document.getElementById("name").style.display='block';
+            
           // //emailVerified = user.emailVerified;
           // uid = user.uid;
           document.getElementById("name").innerHTML = name;

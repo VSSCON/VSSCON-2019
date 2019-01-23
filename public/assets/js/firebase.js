@@ -16,6 +16,31 @@ var app_firebase={};
   app_firebase = firebase;
 })();
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+      document.getElementById("name").style.display='block';
+      //document.getElementById("hlogin").style.display = 'none';
+    // //emailVerified = user.emailVerified;
+    // uid = user.uid;
+    document.getElementById("name").innerHTML = name;
+    // document.getElementById("name1").innerHTML = name;
+    // document.getElementById("Email").innerHTML = email;
+    // document.getElementById("profileImg").src = url;
+    // document.getElementById("payment").innerHTML = "Payment : Not Completed";
+
+
+
+
+   
+
+  } else {
+    // No user is signed in.
+    //window.location.replace("index.html");
+
+  }
+});
+
 // function logOut(){
 //   firebase.auth().signOut();
 //   window.location.replace("index.html");
