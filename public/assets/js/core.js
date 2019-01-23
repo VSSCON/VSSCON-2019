@@ -46,7 +46,7 @@ $(document).ready(function () {
     if ($.fn.revolution) {
         revapi = $('#home').revolution(
 	{
-	    delay: 5000,
+	    delay: 3000,
 	    startwidth: 1170,
 	    startheight: 500,
 	    hideThumbs: 10,

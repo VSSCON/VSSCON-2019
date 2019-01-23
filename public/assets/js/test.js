@@ -1,18 +1,19 @@
 var mainApp={};
-var usid;
+var name;
+var email,url;
+
 (function(){
 
     var firebase = app_firebase;
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            var user1 = firebase.auth().currentUser;
-            var   name = user1.displayName;
+          name = user.displayName;
 
-          usid = firebase.auth().currentUser.displayName;
-          // alert(usid);
-          // User is signed in.
-          //alert(name);
+          email = user.email;
+          url = user.photoURL;
+          
+
         } else {
           // No user is signed in.
           window.location.replace("index.html");
@@ -21,10 +22,12 @@ var usid;
       });
 
       function logOut(){
-          alert();
           firebase.auth().signOut();
+          window.location.replace("index.html");
+
       }
 
       mainApp.logOut = logOut;
 
 })();
+//alert(name+" "+uemail+" "+photoUrl);

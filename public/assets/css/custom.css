@@ -33,7 +33,9 @@
     text-decoration: none;
     display: block;
   }
-  
+  .signin{
+    /* margin-top: 8%; */
+  }
   .dropdown-content a:hover {background-color: #ddd;}
   
   .dropdown:hover .dropdown-content {display: block;}
@@ -57,5 +59,8 @@
   .dropdown:hover .dropbtn {background-color: #fff;}
   #map{
     width: 100%;
+  }
+  .signin{
+    margin-top: 10%;
   }
 }
