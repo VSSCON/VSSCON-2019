@@ -307,11 +307,11 @@
                                 <li><a href="team.html">Team</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="login.html">Login</a></li>
-                                <li class="dropdown">
-                                        <span class="dropbtn">Hello</span>
+                                <li class="dropdown" >
+                                        <span class="dropbtn" id="name">Hello</span>
                                         <div class="dropdown-content">
                                             <a href="profile.html">View Profile</a>
-                                            <a href="#">Sign Out</a>
+                                            <button class="btn btn-danger" onclick="logOut()">LogOut</button>
                                             
                                         </div>
                                         </li>
@@ -336,22 +336,16 @@
         
                         </div>
                         <div class="avatar">
-                            <img alt="" src="" id="profileImg">
+                            <img alt="" src="assets/img/VSSCON/mun logo new.png" id="profileImg">
                         </div>
                         <div class="info" id="profile">
                             <div class="title">
                                 
                             </div>
                             <div>
-                                    <p id="name" style="font-weight:800; font-style:italic; font-size:2em;"></p>
-                                    <p id="institution"></p>
-                                    <p id="phnum"></p>
-                                    <p id="commitee"></p>
-                                    <p id="applying"></p>
-                                    <p id="country"></p>
-                                    <p id="accomodation"></p>
-                                    <p id="experience"></p>
-                                    <p id="payment"></p>
+                                    <p id="name1" style="font-weight:800; font-style:italic; font-size:2em;"></p>
+                                    <p id="Email" ></p>
+                                     <p id="payment"></p>
                               
                             </div>
                           
@@ -482,31 +476,31 @@ var database = firebase.database();
 // Get a reference to the storage service, which is used to create references in your storage bucket
 var storage = firebase.storage();
 
-var user = firebase.auth().currentUser;
+firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("name").style.display='block';
+          // //emailVerified = user.emailVerified;
+          // uid = user.uid;
+          document.getElementById("name").innerHTML = name;
+          document.getElementById("name1").innerHTML = name;
+          document.getElementById("Email").innerHTML = email;
+          document.getElementById("profileImg").src = url;
+          document.getElementById("payment").innerHTML = "Payment : Not Completed";
 
-//alert(firebase.auth().currentUser.uid);
-//var usid = user.uid;
-// console.log(uid);
-// Create a storage reference from our storage service
-var storageRef = storage.ref();
-var imgRef = storage.ref('profile/az');
-                imgRef.getDownloadURL().then((url)=>{
-                    document.getElementById("profileImg").src = url;
-                })
-var starCountRef = database.ref('users/Satyajit Mohapatra');
-starCountRef.on('value', function(snapshot) {
-    data = snapshot.val();
-   this.data = data;
-   document.getElementById("name").innerHTML = data.username;
-   document.getElementById("institution").innerHTML ="<b>Institution: </b>"+ data.institution;
-   document.getElementById("phnum").innerHTML = '<b>Mobile: </b>'+data.phnum;
-   document.getElementById("applying").innerHTML = '<b>Applying As: </b>'+data.applying;
-   document.getElementById("accomodation").innerHTML ='<b>Accomodation: </b>'+ data.accomodation;
-   document.getElementById("experience").innerHTML = '<b>Experience: </b>'+data.experience;
-   document.getElementById("commitee").innerHTML = '<b>Commitee: </b>'+data.checkedCommitee;
-   document.getElementById("payment").innerHTML = '<b>Payment Status: </b><i>Not Completed</i>';
+
+
+
+         
+
+        } else {
+          // No user is signed in.
+          window.location.replace("index.html");
+
+        }
+      });
+
    
-})})();
+})();
     
     
         </script>

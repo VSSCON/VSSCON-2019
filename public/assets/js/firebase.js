@@ -15,3 +15,9 @@ var app_firebase={};
 
   app_firebase = firebase;
 })();
+
+// function logOut(){
+//   firebase.auth().signOut();
+//   window.location.replace("index.html");
+
+// }
