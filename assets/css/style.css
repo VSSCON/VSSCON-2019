@@ -3277,118 +3277,7 @@ margin-bottom:0px;
   .ps-timeline-sec .container {
 	position: relative;
   }
-  @media screen and (max-width: 767px) {
-	.ps-timeline-sec .container ol:before {
-	  background: #F13C5F;
-	  content: "";
-	  width: 10px;
-	  height: 10px;
-	  border-radius: 100%;
-	  position: absolute;
-	  top: 130px !important;
-	  left: 36px !important;
-	}
-	.ps-timeline-sec .container ol:after {
-	  background: #F13C5F;
-	  content: "";
-	  width: 10px;
-	  height: 10px;
-	  border-radius: 100%;
-	  position: absolute;
-	  top: inherit !important;
-	  left: 36px;
-	}
-	.ps-timeline-sec .container ol.ps-timeline {
-	  margin: 130px 0 !important;
-	  border-left: 2px solid #F13C5F;
-	  padding-left: 0 !important;
-	  padding-top: 120px !important;
-	  border-top: 0 !important;
-	  margin-left: 25px !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li {
-	  height: 220px;
-	  float: none !important;
-	  width: inherit !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li:nth-child(2) .img-handler-bot img {
-	  width: 70px;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li:last-child {
-	  margin: 0;
-	  bottom: 0 !important;
-	  height: 120px;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li:last-child .img-handler-bot {
-	  bottom: 40px !important;
-	  width: 40% !important;
-	  margin-left: 25px !important;
-	  margin-top: 0 !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li:last-child .img-handler-bot img {
-	  width: 100%;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li:last-child .ps-top {
-	  margin-bottom: 0 !important;
-	  top: 20px;
-	  width: 50% !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li span {
-	  left: 0 !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:before {
-	  content: none !important;
-  
-	}
-	.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:after {
-	  content: none !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:before {
-	  background-color: #F13C5F;
-	  /* content: none !important; */
-	}
-	.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:after {
-	  content: none !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li .img-handler-top {
-	  position: absolute !important;
-	  bottom: 150px !important;
-	  width: 30% !important;
-	  float: left !important;
-	  margin-left: 35px !important;
-	  margin-bottom: 0 !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li .img-handler-top img {
-	  margin: 0 auto !important;
-	  width: 80% !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
-	  position: absolute !important;
-	  bottom: 115px !important;
-	  width: 30% !important;
-	  float: left !important;
-	  margin-left: 35px !important;
-	  margin-bottom: 0 !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li p {
-	  text-align: left !important;
-	  width: 100% !important;
-	  margin: 0 auto !important;
-	  margin-top: 0px !important;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li .ps-top {
-	  width: 60% !important;
-	  float: right !important;
-	  right: 0;
-	  top: -40px;
-	}
-	.ps-timeline-sec .container ol.ps-timeline li .ps-bot {
-	  width: 60% !important;
-	  float: right !important;
-	  right: 0;
-	  top: -40px;
-	}
-  }
+ 
   .ps-timeline-sec .container ol:before {
 	background: #F13C5F;
 	content: "";
@@ -3417,7 +3306,7 @@ margin-bottom:0px;
   }
   .ps-timeline-sec .container ol.ps-timeline li {
 	float: left;
-	width: 25%;
+	width: 16.5%;
 	padding-top: 30px;
 	position: relative;
   }
@@ -3431,9 +3320,10 @@ margin-bottom:0px;
 	box-shadow: 0 0 0 0px #fff;
 	text-align: center;
 	line-height: 50px -10;
-	color: #df8625;
-	font-size: 2em;
+	color: black;
+	font-size: 1em;
 	font-style: normal;
+	font-weight: 800;
 	position: absolute;
 	top: -26px;
 	left: 50%;
@@ -3486,23 +3376,33 @@ margin-bottom:0px;
 	margin-bottom: 130px;
 	width: 100%;
   }
-  .ps-timeline-sec .container ol.ps-timeline li .img-handler-top img {
+  .ps-timeline-sec .container ol.ps-timeline li .img-handler-top i {
 	display: table;
 	margin: 0 auto;
-  }
+	font-size:4em;
+	color: lightblue;
+	}
+	.ps-timeline-sec .container ol.ps-timeline li .img-handler-top img {
+		display: table;
+		margin: 0 auto;
+		
+		}
   .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
 	position: absolute;
 	margin-top: 60px;
 	width: 100%;
   }
-  .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot img {
+  .ps-timeline-sec .container ol.ps-timeline li .img-handler-bot i {
 	display: table;
 	margin: 0 auto;
+	font-size:4em;
+	color: lightblue;
   }
   .ps-timeline-sec .container ol.ps-timeline li p {
 	text-align: center;
 	width: 80%;
 	margin: 0 auto;
+	padding: 7%;
   }
   .ps-timeline-sec .container ol.ps-timeline li .ps-top {
 	position: absolute;
@@ -3513,4 +3413,116 @@ margin-bottom:0px;
 	position: absolute;
 	margin-top: 35px;
   }
-  
+	
+	@media screen and (max-width: 767px) {
+		.ps-timeline-sec .container ol:before {
+			background: #F13C5F;
+			content: "";
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			position: absolute;
+			top: 130px !important;
+			left: 36px !important;
+		}
+		.ps-timeline-sec .container ol:after {
+			background: #F13C5F;
+			content: "";
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			position: absolute;
+			top: inherit !important;
+			left: 36px;
+		}
+		.ps-timeline-sec .container ol.ps-timeline {
+			margin: 130px 0 !important;
+			border-left: 2px solid #F13C5F;
+			padding-left: 0 !important;
+			padding-top: 120px !important;
+			border-top: 0 !important;
+			margin-left: 25px !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li {
+			height: 220px;
+			float: none !important;
+			width: inherit !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li:nth-child(2) .img-handler-bot img {
+			width: 70px;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li:last-child {
+			margin: 0;
+			bottom: 0 !important;
+			height: 120px;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li:last-child .img-handler-bot {
+			bottom: 40px !important;
+			width: 40% !important;
+			margin-left: 25px !important;
+			margin-top: 0 !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li:last-child .img-handler-bot img {
+			width: 100%;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li:last-child .ps-top {
+			margin-bottom: 0 !important;
+			top: 20px;
+			width: 50% !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li span {
+			left: 0 !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:before {
+			content: none !important;
+		
+		}
+		.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-top:after {
+			content: none !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:before {
+			background-color: #F13C5F;
+			/* content: none !important; */
+		}
+		.ps-timeline-sec .container ol.ps-timeline li span.ps-sp-bot:after {
+			content: none !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li .img-handler-top {
+			position: absolute !important;
+			bottom: 150px !important;
+			width: 30% !important;
+			float: left !important;
+			margin-left: 35px !important;
+			margin-bottom: 0 !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li .img-handler-top img {
+			margin: 0 auto !important;
+			width: 80% !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li .img-handler-bot {
+			position: absolute !important;
+			bottom: 115px !important;
+			width: 30% !important;
+			float: left !important;
+			margin-left: 35px !important;
+			margin-bottom: 0 !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li p {
+			text-align: left !important;
+			width: 100% !important;
+			margin: 0 auto !important;
+			margin-top: 0px !important;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li .ps-top {
+			width: 60% !important;
+			float: right !important;
+			right: 0;
+			top: -40px;
+		}
+		.ps-timeline-sec .container ol.ps-timeline li .ps-bot {
+			width: 60% !important;
+			float: right !important;
+			right: 0;
+			top: -40px;
+		}
+		}
