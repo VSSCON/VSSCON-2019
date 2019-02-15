@@ -558,8 +558,9 @@
                     i
                   ].Name;
                   document.getElementById("Country").innerHTML =
-                    "<b>Country Alloted : </b>" +
-                    snapshot.val()[i]["Country allocated"];
+                    "<b>Country Allocated : </b>" +
+                    snapshot.val()[i]["Country allocated"] +
+                    "  <button class='btn-primary' id='upgrade' onclick='upgrade()'>Upgrade</button>";
                   document.getElementById("Phone").innerHTML =
                     "<b>Mobile No. : </b>" + snapshot.val()[i]["Phone number"];
                   document.getElementById("Applying").innerHTML =
@@ -575,6 +576,26 @@
           }
         });
       })();
+      function upgrade() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            writeUserData(email, name);
+            alert(name + " your request for Upgrade has been received.");
+            document.getElementById("upgrade").disabled = true;
+            document.getElementById("upgrade").style.backgroundColor = "green";
+          }
+        });
+      }
+      function writeUserData(email, name) {
+        firebase
+          .database()
+          .ref("Upgrade/" + name)
+          .set({
+            name: name,
+            email: email,
+            msg: "Request for upgrade"
+          });
+      }
     </script>
 
     <!-- BEGIN CORE JS FRAMEWORK -->
