@@ -570,6 +570,28 @@
                 }
               }
             });
+
+            var cadata = firebase.database().ref("CA/");
+            cadata.on("value", function(snapshot) {
+              for (let i = 0; i < snapshot.val().length; i++) {
+                if (snapshot.val()[i].Username == user.email) {
+                  //console.log(snapshot.val()[i].Username);
+                  document.getElementById("name1").innerHTML = snapshot.val()[
+                    i
+                  ].Name;
+                  document.getElementById("Country").innerHTML =
+                    "<b>Country Allocated : </b>" +
+                    snapshot.val()[i]["Country alloted"] +
+                    "  <button class='btn-primary' id='upgrade' onclick='upgrade()'>Upgrade</button>";
+                  document.getElementById("Phone").innerHTML =
+                    "<b>Mobile No. : </b>" + snapshot.val()[i]["Phone number"];
+                  document.getElementById("Applying").innerHTML =
+                    "<b>Applying As : </b>" + snapshot.val()[i]["Applying as "];
+                  document.getElementById("Timestamp").innerHTML =
+                    "<b>Registered Date : </b>" + snapshot.val()[i].Timestamp;
+                }
+              }
+            });
           } else {
             // No user is signed in.
             window.location.replace("index.html");
