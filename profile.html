@@ -402,7 +402,8 @@
                   <p id="Phone"></p>
                   <p id="Country"></p>
                   <p id="Applying"></p>
-                  <p id="Payment"></p>
+                  <p id="Accomodation"></p>
+                  <p id="Payment" style="color:red;font-weight:800;"></p>
                   <p id="Timestamp"></p>
                 </div>
               </div>
@@ -535,7 +536,8 @@
         var database = firebase.database();
         // Get a reference to the storage service, which is used to create references in your storage bucket
         var storage = firebase.storage();
-
+        var ac = "";
+        var ap = "";
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             document.getElementById("name").style.display = "block";
@@ -545,8 +547,8 @@
             document.getElementById("Email").innerHTML = email;
             document.getElementById("profileImg").src = url;
 
-            document.getElementById("Payment").innerHTML =
-              "<b>Payment :</b> Not Completed";
+            // document.getElementById("Payment").innerHTML =
+            //   "<b>Payment :</b> Not Completed";
 
             var data = firebase.database().ref("Delegate form/");
             data.on("value", function(snapshot) {
@@ -565,8 +567,26 @@
                     "<b>Mobile No. : </b>" + snapshot.val()[i]["Phone number"];
                   document.getElementById("Applying").innerHTML =
                     "<b>Applying As : </b>" + snapshot.val()[i]["Applying as "];
+                  document.getElementById("Accomodation").innerHTML =
+                    "<b>Accomodation : </b>" +
+                    snapshot.val()[i]["Want Accommodation ?"];
                   document.getElementById("Timestamp").innerHTML =
                     "<b>Registered Date : </b>" + snapshot.val()[i].Timestamp;
+                  ap = snapshot.val()[i]["Applying as "];
+                  ac = snapshot.val()[i]["Want Accommodation ?"];
+                  if (ap == "Double" && ac == "No") {
+                    document.getElementById("Payment").innerHTML =
+                      "<b>Payment: </b><a href='https://imjo.in/q67guX'><button class='btn-warning'>Pay Now</button></a>";
+                  } else if (ap == "Double" && ac == "Yes") {
+                    document.getElementById("Payment").innerHTML =
+                      "<b>Payment: </b><a href='https://imjo.in/curgUY'><button class='btn-warning'>Pay Now</button></a>";
+                  } else if (ap == "Single" && ac == "No") {
+                    document.getElementById("Payment").innerHTML =
+                      "<b>Payment: </b><a href='https://imjo.in/dWnq3J'><button class='btn-warning'>Pay Now</button></a>";
+                  } else if (ap == "Single" && ac == "Yes") {
+                    document.getElementById("Payment").innerHTML =
+                      "<b>Payment: </b><a href='https://imjo.in/uKZcJs'><button class='btn-warning'>Pay Now</button></a>";
+                  }
                 }
               }
             });
@@ -587,6 +607,9 @@
                     "<b>Mobile No. : </b>" + snapshot.val()[i]["Phone number"];
                   document.getElementById("Applying").innerHTML =
                     "<b>Applying As : </b>" + snapshot.val()[i]["Applying as "];
+                  document.getElementById("Accomodation").innerHTML =
+                    "<b>Accomodation : </b>" +
+                    snapshot.val()[i]["Want Accommodation ?"];
                   document.getElementById("Timestamp").innerHTML =
                     "<b>Registered Date : </b>" + snapshot.val()[i].Timestamp;
                 }
