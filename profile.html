@@ -401,6 +401,7 @@
                   <p id="Email"></p>
                   <p id="Phone"></p>
                   <p id="Country"></p>
+                  <p id="Committee"></p>
                   <p id="Applying"></p>
                   <p id="Accomodation"></p>
                   <p id="Payment" style="color:red;font-weight:800;"></p>
@@ -538,6 +539,7 @@
         var storage = firebase.storage();
         var ac = "";
         var ap = "";
+        var pay = "";
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             document.getElementById("name").style.display = "block";
@@ -563,6 +565,9 @@
                     "<b>Country Allocated : </b>" +
                     snapshot.val()[i]["Country allocated"] +
                     "  <button class='btn-primary' id='upgrade' onclick='upgrade()'>Upgrade</button>";
+                  document.getElementById("Committee").innerHTML =
+                    "<b>Committee Alloted : </b>" +
+                    snapshot.val()[i]["Committee alloted"];
                   document.getElementById("Phone").innerHTML =
                     "<b>Mobile No. : </b>" + snapshot.val()[i]["Phone number"];
                   document.getElementById("Applying").innerHTML =
@@ -574,6 +579,9 @@
                     "<b>Registered Date : </b>" + snapshot.val()[i].Timestamp;
                   ap = snapshot.val()[i]["Applying as "];
                   ac = snapshot.val()[i]["Want Accommodation ?"];
+                  pay = snapshot.val()[i]["Payment"]
+                  if(pay != "Done")
+                  {
                   if (ap == "Double" && ac == "No") {
                     document.getElementById("Payment").innerHTML =
                       "<b>Payment: </b><a href='https://imjo.in/q67guX'><button class='btn-warning'>Pay Now</button></a>";
@@ -587,7 +595,12 @@
                     document.getElementById("Payment").innerHTML =
                       "<b>Payment: </b><a href='https://imjo.in/uKZcJs'><button class='btn-warning'>Pay Now</button></a>";
                   }
-                }
+                  }
+                  else{
+                    document.getElementById("Payment").innerHTML ="<b>Payment Status: </b>Successful";
+                  }
+
+               }
               }
             });
 
